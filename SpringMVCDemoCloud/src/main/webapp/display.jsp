@@ -9,7 +9,7 @@
 <body>
 
 Welcome
-<%= request.getAttribute("number1")%>
+<%= request.getAttribute("greet")%>
 
 </body>
 </html>

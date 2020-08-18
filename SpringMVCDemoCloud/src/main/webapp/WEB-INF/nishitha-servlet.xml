@@ -10,6 +10,9 @@
 	http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
 	
 	
-	<ctx:annotation-config></ctx:annotation-config>
-	<ctx:component-scan base-package="web.app"></ctx:component-scan>
+<!--  	<ctx:annotation-config></ctx:annotation-config>
+	<ctx:component-scan base-package="web.app"></ctx:component-scan> -->
+	<bean name="display.jsp" class="web.app.ControllerDemo">
+	</bean>
+
 </beans>

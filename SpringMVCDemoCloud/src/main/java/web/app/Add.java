@@ -44,15 +44,15 @@ public class Add {
 		//ModelAndView modelView=new ModelAndView("display.jsp");
 		//modelView.addObject("number",no1);
 		
-		ModelAndView mv=new ModelAndView("redirect:/logout");
-		
 		return map;
 	}
-	@RequestMapping("/login")
-	public ModelAndView login(@RequestParam String password,ModelAndView mv)
+	@RequestMapping("/loginPage")
+	public ModelAndView login(@RequestParam String password,@RequestParam String user)
 	{
 		if(!password.equals("password"))
-			return new ModelAndView("redirect:/login.jsp");
+			return new ModelAndView("redirect:/index.html");
+		ModelAndView mv=new ModelAndView("display.jsp");
+		mv.addObject("username",user);
 		return mv;
 	}
 	
